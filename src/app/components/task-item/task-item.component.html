@@ -1,0 +1,16 @@
+<div class="w-100 p-1 mb-3 row bg-light rounded">
+    <div class="col-2 d-flex flex-column justify-content-center">
+        <div (click)="onToggle(task)"
+        class="done-already"
+        [ngClass]="{reminder: !task.reminder}"></div>
+    </div>
+
+    <div class="col-7 d-flex flex-column">
+        <h5 class="mt-2" [ngStyle]="{'font-weight':'bolder'}">{{task.text}}</h5>
+        <p><i>{{task.day}}</i></p>
+    </div>
+    <div class="col-2 d-flex pt-4 justify-content-center ">
+        <fa-icon class="delete" [icon]='faTrash'
+        (click)="onDelete(task)"/>
+    </div>
+</div>

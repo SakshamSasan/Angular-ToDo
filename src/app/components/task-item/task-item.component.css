@@ -1,0 +1,21 @@
+fa-icon{
+    cursor: pointer;
+}
+.delete:hover{
+    color: red;
+}
+.done-already {
+    display: inline-block;
+	margin: auto;
+	vertical-align: bottom;
+	cursor: pointer;
+	display: block;
+	height: 15px;
+	width: 15px;
+	border-radius: 50%;
+	border: 1px solid black;
+	flex-shrink: 0;
+}
+.reminder{
+background-color: green;
+}

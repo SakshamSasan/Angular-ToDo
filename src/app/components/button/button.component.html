@@ -1,0 +1,6 @@
+<div *ngIf="formStatus; else elseBlock">
+    <button class="mx-5 btn btn-danger" (click)="onClick()">{{text}}</button>
+</div>
+<ng-template #elseBlock>
+    <button class="mx-5 d-inline-block btn btn-success" (click)="onClick()">{{text}}</button>
+</ng-template>
