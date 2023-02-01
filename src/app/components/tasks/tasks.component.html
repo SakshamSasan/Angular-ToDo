@@ -1,4 +1,8 @@
-<app-add-task (submitForm)="addTask($event)"></app-add-task>
-<app-task-item *ngFor="let task of tasks" [task]="task"
-(onDeleteTask)="deleteTask(task)"
-(onToggleTask)="toggleTask(task)" />
+
+    <app-add-task class="w-100" (submitForm)="addTask($event)"></app-add-task>
+    <app-task-item class="w-100" *ngFor="let task of tasks" [task]="task"
+    (onDeleteTask)="deleteTask(task)"
+    (onToggleTask)="toggleTask(task)" />
+    <app-footer class='my-5'/>
+
+

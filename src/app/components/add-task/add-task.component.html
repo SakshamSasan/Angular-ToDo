@@ -1,4 +1,4 @@
-<div class="my-4 w-100">
+<div *ngIf="showAddTask" class="my-4 w-100">
     <form class="w-75 border border-dark p-3 d-flex flex-column" 
     (ngSubmit)="onSubmit()">
         <label class="d-inline-block" for="text">Task</label>

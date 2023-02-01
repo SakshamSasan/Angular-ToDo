@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { UiService } from 'src/app/services/ui.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -7,16 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   title:string='Task Tracker'
-  btnText:string='Add'
-  formOpen:boolean=false
+  showAddTask:boolean;
+ 
 
-  constructor(){
+  constructor(private ui:UiService, private router:Router){
 
   }
   ngOnInit(): void {
-    
+    this.ui.onToggle().subscribe(val=>this.showAddTask=val)
   }
   toggleAddTask(){
-    
+    this.ui.toggleAddtask()
+  }
+  isOnRoute(route:string):boolean{
+    return this.router.url==route
   }
 }
